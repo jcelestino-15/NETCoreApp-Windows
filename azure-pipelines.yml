@@ -35,7 +35,7 @@ stages:
         ArtifactName: 'drop'
         publishLocation: 'Container'
 
-- stage: Deploy to Dev 
+- stage: Deploy_to_WindowsDev 
   dependsOn: Build
   condition: |
     and
