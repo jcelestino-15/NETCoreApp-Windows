@@ -44,10 +44,10 @@ stages:
       eq(variables['Build.SourceBranchName'], 'main')
     )
   jobs:
-  - deployment: deploytoWindows
+  - deployment: NETCoreApp_Dev
     environment:
       name: Windows-dev
-      resourceType: VirutalMachine
+      resourceType: VirtualMachine
     strategy:
       runOnce:
         deploy:
