@@ -57,11 +57,9 @@ stages:
                 buildType: 'current'
                 downloadType: 'single'
                 artifactName: 'drop'
-                downloadPath: '$(System.ArtifactsDirectory)'
+                downloadPath: '$(System.DefaultWorkingDirectory)'
 
-            - task: ExtractFiles@1
+            - task: IISWebAppDeploymentOnMachineGroup@0
               inputs:
-                archiveFilePatterns: 'C:\azagent\A1\_work\1\drop\s.zip'
-                destinationFolder: 'C:\www'
-                cleanDestinationFolder: false
-                overwriteExistingFiles: true
+                WebSiteName: 'Default Web Site'
+                Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
