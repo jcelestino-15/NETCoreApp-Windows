@@ -58,3 +58,10 @@ stages:
                 downloadType: 'single'
                 artifactName: 'drop'
                 downloadPath: '$(System.ArtifactsDirectory)'
+
+            - task: ExtractFiles@1
+              inputs:
+                archiveFilePatterns: 'C:\azagent\A1\_work\1\drop\s.zip'
+                destinationFolder: 'C:\www'
+                cleanDestinationFolder: false
+                overwriteExistingFiles: true
