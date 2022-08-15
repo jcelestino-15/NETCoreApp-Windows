@@ -63,3 +63,4 @@ stages:
               inputs:
                 WebSiteName: 'Default Web Site'
                 Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
+                JSONFiles: 'appsettings.Development.json'
